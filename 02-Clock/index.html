@@ -56,17 +56,32 @@
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
 
+
     .hand {
       width: 50%;
       height: 6px;
       background: black;
       position: absolute;
       top: 50%;
+      right:50%;
       transform-origin:100%;
       transform:rotate(90deg);
-      /* transition: all 0.5s; */
-      /* transition-timing-function:cubic-bezier(0.1, 2.7, 0.58, 1); */
+      box-shadow: 3px 3px 2px rgba(0, 0, 0, .5);
     }
+
+    .hour-hand {
+      border-bottom-left-radius: 0.5em;
+      border-top-left-radius: 0.5em;
+      width:40%;
+      height:10px;
+    }
+
+    .second-hand {
+      height:2px;
+      background:#f5a246;
+    }
+
+
 
 
 
