@@ -18,7 +18,7 @@
 
   <style>
     html {
-      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+      background: #018DED url(https://images.unsplash.com/photo-1473147319958-21c51372f690?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
       background-size: cover;
       font-family: 'helvetica neue';
       text-align: center;
@@ -59,10 +59,16 @@
     .hand {
       width: 50%;
       height: 6px;
-      background: black;
+      background: #d19361;
       position: absolute;
       top: 50%;
+      transform-origin:100%;
+      transform:rotate(90deg);
+      transition: all 0.5s;
+      transition-timing-function:cubic-bezier(0.1, 2.7, 0.58, 1);
     }
+
+
 
   </style>
 
