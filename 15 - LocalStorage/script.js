@@ -31,6 +31,21 @@ function populateList(plates = [], platesList) {
   }).join('');
 }
 
+function toggleDone(e){
+  // skip this unless it is an input
+  if(!e.target.matches('input')) return;
+  const el = e.target;
+  const index = el.dataset.index;
+  items[index].done = !items[index].done;
+  // mirror the changes to local storage
+  localStorage.setItem('items', JSON.stringify(items));
+  // rerender the entire list, if can just rerender that element, would be better
+  populateList(items, itemsList);
+}
+
 addItems.addEventListener('submit', addItem);
+// event delegation
+itemsList.addEventListener('click', toggleDone);
 
 populateList(items, itemsList);
+
