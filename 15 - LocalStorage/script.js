@@ -1,6 +1,7 @@
 const addItems = document.querySelector('.add-items');
 const itemsList = document.querySelector('.plates');
-const items = [];
+// if there's no items already set it to an empty array 
+const items = JSON.parse(localStorage.getItem('items')) || [] ;
 
 function addItem(e) {
   e.preventDefault();
@@ -10,10 +11,11 @@ function addItem(e) {
   const item = {
     text,
     done:false
-  }
+  };
 
   items.push(item);
   populateList(items, itemsList);
+  localStorage.setItem('items', JSON.stringify(items));
   this.reset();
 
 }
@@ -25,9 +27,10 @@ function populateList(plates = [], platesList) {
         <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''}>
         <label for="item${i}">${plate.text}</label>
       </li>
-    `
+    `;
   }).join('');
 }
 
-
 addItems.addEventListener('submit', addItem);
+
+populateList(items, itemsList);
