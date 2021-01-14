@@ -5,7 +5,7 @@
   <title>Follow Along Nav</title>
 </head>
 <body>
-  <h2>Cool</h2>
+  <h2>Follow Along Nav</h2>
   <nav class="top">
     <div class="dropdownBackground">
       <span class="arrow"></span>
@@ -16,8 +16,8 @@
         <a href="#">About Me</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://logo.clearbit.com/wesbos.com">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+            <img width="100px" src="https://avatars3.githubusercontent.com/u/29808199?s=400&u=3c84a8c589a60a4b3e0e8056d33f5445c1a1cb94&v=4">
+            <p>Hi I am Clementine, front end developer with a passion for building logical and aesthetic digital products that solve everyday problems.</p>
           </div>
         </div>
       </li>
@@ -26,49 +26,48 @@
         <ul class="dropdown courses">
           <li>
             <span class="code">RFB</span>
-            <a href="https://ReactForBeginners.com">React For Beginners</a>
+            <a href="#">React For Beginners</a>
           </li>
           <li>
             <span class="code">ES6</span>
-            <a href="https://ES6.io">ES6 For Everyone</a>
+            <a href="#">ES6 For Everyone</a>
           </li>
           <li>
             <span class="code">NODE</span>
-            <a href="https://LearnNode.com">Learn Node</a>
+            <a href="#">Learn Node</a>
           </li>
           <li>
             <span class="code">STPU</span>
-            <a href="https://SublimeTextBook.com">Sublime Text Power User</a>
+            <a href="#">Sublime Text Power User</a>
           </li>
           <li>
             <span class="code">WTF</span>
-            <a href="http://Flexbox.io">What The Flexbox?!</a>
+            <a href="#">What The Flexbox?!</a>
           </li>
           <li>
             <span class="code">GRID</span>
-            <a href="https://CSSGrid.io">CSS Grid</a>
+            <a href="#">CSS Grid</a>
           </li>
           <li>
             <span class="code">LRX</span>
-            <a href="http://LearnRedux.com">Learn Redux</a>
+            <a href="#">Learn Redux</a>
           </li>
           <li>
             <span class="code">CLPU</span>
-            <a href="http://CommandLinePowerUser.com">Command Line Power User</a>
+            <a href="#">Command Line Power User</a>
           </li>
           <li>
             <span class="code">MMD</span>
-            <a href="http://MasteringMarkdown.com">Mastering Markdown</a>
+            <a href="#">Mastering Markdown</a>
           </li>
         </ul>
       </li>
       <li>
         <a href="#">Other Links</a>
         <ul class="dropdown dropdown3">
-          <li><a class="button" href="http://twitter.com/wesbos">Twitter</a></li>
-          <li><a class="button" href="http://facebook.com/wesbos.developer">Facebook</a></li>
-          <li><a class="button" href="http://wesbos.com">Blog</a></li>
-          <li><a class="button" href="http://wesbos.com/courses">Course Catalog</a></li>
+          <li><a class="button" href="http://twitter.com/clemcodes">Twitter</a></li>
+          <li><a class="button" href="http://facebook.com/">Facebook</a></li>
+          <li><a class="button" href="https://github.com/cl3m3nt1n3">Github</a></li>
         </ul>
       </li>
     </ul>
@@ -85,18 +84,31 @@
   }
   
   body {
-    margin: 0;
+    --stripe: #7ea3b3;
+    --bg: #decfd5d9;
+
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+      linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
+    font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+    /* margin: 0;
     min-height: 100vh;
     background:
       linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
       linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
       linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
       linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+  } */
   }
 
   h2 {
     margin-top: 0;
     padding-top: .8em;
+    text-align:center;
+    color:#fff;
   }
 
   nav {
@@ -219,7 +231,7 @@
   .button[href*=courses] { background: #ffc600; }
 </style>
 
-<script>
+<script src="script.js">
 </script>
 
 </body>
